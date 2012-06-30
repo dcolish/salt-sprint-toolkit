@@ -11,8 +11,8 @@ Vagrant::Config.run do |config|
                                   :nfs => true)
     master_config.vm.network :hostonly, "172.17.1.10"
     master_config.vm.host_name = "master"
-    master_config.vm.box = "SaltMaster"
-    # master_config.vm.box_url = "http://dl.dropbox.com/u/3639518/SaltSprint.box"
+    master_config.vm.box = "SaltSprint"
+    master_config.vm.box_url = "http://dl.dropbox.com/u/3639518/SaltSprint.box"
     master_config.vm.forward_port 22, 2223
     master_config.vm.forward_port 80, 8080
     master_config.vm.provision :shell do |shell|

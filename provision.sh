@@ -12,3 +12,6 @@ for x in {master,minion}; do
 done
 sleep 10
 salt-key -a master
+
+sudo -u vagrant virtualenv --distribute ENV
+sudo -u vagrant cd salt && /home/vagrant/ENV/bin/python setup.py develop --no-deps
